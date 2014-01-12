@@ -1,0 +1,125 @@
+/** Body **/
+body{
+	overflow-x:hidden;
+}
+@media (max-width: 767px) {
+	 body {
+		padding-left: 0px !important;
+	}
+}
+/**Header & Trademark**/
+
+
+/*This font-face is use in class .simpilified-solution-header */
+@font-face {
+  font-family: 'Telex';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Telex-Regular'), url(https://themes.googleusercontent.com/static/fonts/telex/v1/QBUn5F7b-9Ulki7K75J1Bw.woff) format('woff');
+}
+
+
+/*Simplified Solution Logo(Water Mark Effect)*/
+.simple-bg-img-company{
+	background: url('../img/trademarks/tssi_light.png') no-repeat;
+}
+.simple-bg-img-school{
+	background: url('../img/trademarks/school_logo.png') no-repeat;
+}
+.simple-bg-lower{
+	background-position:100% 110%
+}
+.simple-bg-upper{
+	background-position: 0% 40px; /* 0% 10% */
+}
+/*End*/
+
+/*Simpilied Solution Header*/
+.simpilified-solution-header-inner {
+	font-family: 'Telex', sans-serif !important;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	float: left;
+	display: block;
+	padding: 0px 45px 15px;
+	font-size: 15px;
+	font-weight: 200;
+	color: white;
+}
+
+div.header-container, div.footer-container {
+	min-height: 30px;/* 50px; */
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #45aeea;
+	background-image: -moz-linear-gradient(top, #54b4eb, #2fa4e7);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#54b4eb), to(#2fa4e7));
+	background-image: -webkit-linear-gradient(top, #54b4eb, #2fa4e7);
+	background-image: -o-linear-gradient(top, #54b4eb, #2fa4e7);
+	background-image: linear-gradient(to bottom, #54b4eb, #2fa4e7);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54b4eb', endColorstr='#ff2fa4e7', GradientType=0);
+	border: 1px solid #1684c2;
+	-webkit-box-shadow: -5px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow:  -5px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	box-shadow: -5px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	*zoom:1;
+	position: fixed;
+	width:100%;
+	z-index: 99;
+}
+div.footer-container{
+	bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	min-height: 25px;
+	-webkit-box-shadow: -5px -6px 5px -6px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow:  -5px -6px 5px -6px rgba(0, 0, 0, 0.7);
+	box-shadow: -5px -6px 5px -6px rgba(0, 0, 0, 0.7);
+}
+div.footer-container footer{
+	text-align: center;
+	color:rgb(7, 96, 131);
+	font-size: 11px;
+}
+
+
+
+.table thead th{
+	border-bottom: 1px solid #D5CACA;
+	background-image: -webkit-linear-gradient(top, #F8F8F8, #E9E9E9);
+	background-color: #F8F8F8;
+	background-image: -moz-linear-gradient(top, #F8F8F8, #E9E9E9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F8F8F8), to(#E9E9E9));
+	background-image: -webkit-linear-gradient(top, #F8F8F8, #E9E9E9);
+	background-image: -o-linear-gradient(top, #F8F8F8, #E9E9E9);
+	background-image: linear-gradient(to bottom, #F8F8F8, #E9E9E9);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F8F8', endColorstr='#E9E9E9', GradientType=0);
+	height: 3.5em !important;
+	min-height: 3.5em !important;
+}
+
+
+
+/** Typography  **/
+.text-right{
+	text-align:right;
+}
+.text-left{
+	text-align:left;
+}
+.text-center{
+	text-align:center;
+}
+.inline{
+	display:inline-block;
+}
+
+
+/**Margins and Paddings**/
+.m-t-5{
+	margin-top:5px;
+}
+.m-t-5e{
+	margin-top:5em;
+}

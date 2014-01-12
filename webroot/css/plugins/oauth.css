@@ -1,0 +1,33 @@
+.oauth-container{
+	width: 95%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.apps{
+	padding-top: 15px;
+}
+.apps ul{
+	list-style-type: none;
+}
+.apps ul li{
+	min-height: 80px;
+	padding-bottom: 10px;
+}
+.apps .app-icon{
+	float: left;
+	font-size: 2em;
+	color:#999;
+}
+.apps .app-info{
+	float: right;
+}
+.apps .app-info h5 {
+	line-height:10px
+}
+.apps .app-info span {
+	font-size: 13px;
+}
+.border-right{
+	border-right: 1px solid #e5e5e5;
+	min-height: 35em ;
+}

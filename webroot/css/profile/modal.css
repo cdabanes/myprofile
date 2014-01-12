@@ -1,0 +1,68 @@
+@media (max-width: 767px) {
+	.modal.fade.in {
+		top: 10% !important;
+	}
+}
+.modal-header{
+	background-color: #49afcd;
+	-webkit-box-shadow: -2px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: -2px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	box-shadow: -2px 6px 5px -6px rgba(0, 0, 0, 0.7);
+	border-bottom: 1px solid #0B96BE;
+}
+.modal-header h3 {
+	color:white;
+}
+<<<<<<< .mine
+.modal .input-prepend .add-on{
+	min-width: 80px;
+	text-align: left;
+	background: none;
+}
+
+=======
+
+>>>>>>> .r516
+.modal .words-amount{
+	font-size:12px;
+}
+.modal .row-fluid {
+margin-bottom: 5px;
+}
+.modal .modal-section-header{
+	text-align: center;
+	border-bottom: 2px dotted #998989;
+	color: #3a87ad;
+	font-size: 15px;
+}
+.modal {
+  left: 39%; 
+  width: 63%;
+}
+.longModal {
+	left: 27% !important;
+	width: 86% !important;
+}
+.modal input,.modal select{
+	border-radius: 3px;
+	border-top-left-radius:3px !important;
+	border-bottom-left-radius:3px !important;
+}
+.modal label {
+	display: inline-block;
+	line-height: 4px;
+	margin-bottom: 6px;
+	width: 100px;
+	text-align: right;
+	font-size: 13px !important;
+	font-weight: bold;
+	
+}
+.modal label : after{
+	display-block: content: "X";
+}
+/**/
+.sub-modal{
+	top: 76% !important;
+}
+ 

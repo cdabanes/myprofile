@@ -1,0 +1,117 @@
+<script>
+	$(document).ready(function(){
+		$('#ClassListTable').dataTable({
+			"bPaginate": true,
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": true,
+			"bScrollCollapse": true,
+		});
+	});
+</script>
+<div class="actions-container row-fluid animate">
+	 <div id="profile-navigation" class="span12 nav-marginTop">		
+		<div class="row-fluid">
+			<div class="span6">		
+				<div class="row-fluid">
+					<div class="span4 module">
+						<div class="module-wrap">
+							<div class="module-name classlists">
+									 <?php echo $this->Html->link( 'Classlists',
+															'javascript:void()'
+														);  ?>								
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+							<?php echo $this->Html->link( 	$this->Html->tag('i', '', array('class' => 'icon-plus icon-white')).
+													$this->Html->tag('span', 'CREATE', array('class' => 'action-label')),
+													array('action' => 'add'), array('escape' => false,'class'=>'btn btn-medium btn-primary btn-block animate' ,'id'=>'intent-create')
+												);  ?>			
+					</div>
+					<div class="btn-group span3">
+					  <a class="btn btn-medium btn-block dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class=" icon-th-list"></i><span class="action-label">LINKS</span>	
+					  </a>
+					  <ul class="dropdown-menu">
+						<!-- dropdown menu links -->
+							<li><?php echo $this->Html->link(__('Students', true), array('controller' => 'students', 'action' => 'index')); ?> </li>
+							<li><?php echo $this->Html->link(__('Sections', true), array('controller' => 'sections', 'action' => 'index')); ?> </li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ </div>
+
+<div class="sub-content-container">
+	<div class="w90 center">
+		<table class="table table-striped table-condensed table-hover table-bordered tablesorter display" id="ClassListTable">
+			<thead>
+				<tr>
+					<th class="w10"><a>Classlist ID</a></th>
+					<th class="w10"><a>Student ID</a></th>
+					<th class="w55"><a>Section Name</a></th>
+					<th class="w10"><a>Esp</a></th>
+					<th class="w10"><a>Status</a></th>
+					<th class="w5"><a>Actions</a></th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php
+			$i = 0;
+			foreach ($classlists as $classlist):
+				$class = null;
+				if ($i++ % 2 == 0) {
+					$class = ' class="altrow"';
+				}
+			?>
+			<tr<?php echo $class;?>>
+				<td><?php echo $classlist['Classlist']['id']; ?></td>
+				<td><?php echo $classlist['Student']['id']; ?></td>
+				<td><?php echo $classlist['Section']['id']; ?></td>
+				<td><?php echo $classlist['Classlist']['esp']; ?></td>
+				<td><?php echo $classlist['Classlist']['status']; ?></td>
+				<td class="actions">
+					<div class="btn-group">
+						<button class="btn btn-center dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i><span class="caret"></span></button>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="#" class="action-edit"><i class="icon-edit"></i> Edit</a></li>
+							<li><a href="#" class="action-delete"><i class="icon-remove"></i> Delete</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	
+	<!-- Modal -->
+	<?php echo $this->Form->create('Classlist',array('action'=>'add','name'=>'modalForm','model'=>'classlists'));?>
+	<div id="intent-modal" class="modal hide fade " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header ">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+			<h3 id="myModalLabel">Add Classlist</h3>
+		</div>
+		<div class="modal-body">
+			<div class="row-fluid">
+				<?php echo $this->Form->input('student_id',array('class'=>'span2','label'=>'Student','div'=>false));?>	
+				<?php echo $this->Form->input('section_id',array('class'=>'span2','label'=>'Section','div'=>false));?>	
+				<?php echo $this->Form->input('esp',array('class'=>'span2','label'=>'ESP','div'=>false));?>	
+			</div>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('status',array('class'=>'span2','div'=>false));?>	
+			</div>
+
+		</div>
+		<?php echo $this->Form->end();?>
+		<div class="modal-footer">
+			<button class="btn btn-primary intent-save" type="button">Save</button>
+			<button class="btn intent-cancel" data-dismiss="modal" aria-hidden="true" type="button">Cancel</button>
+		</div>
+	</div>
+	
+</div>

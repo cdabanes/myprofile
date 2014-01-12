@@ -1,0 +1,99 @@
+#home-login .login-input,#home-login .login-button{
+	display: inline-block;
+	overflow: hidden;
+}
+#home-brief, #home-user{
+	margin-top:7%;
+}
+#welcome{
+	margin-top:1%;
+}
+#user-details,#thank-you{
+	margin-top:11%;
+	padding-bottom:20px;
+}
+#home-user{
+	margin-left:35px;
+	border-left: 1px dotted #ccc;
+}
+#home-user h4{
+padding:0px;
+margin:0px 5px;
+}
+
+.remember{
+	padding-top:8px;
+}
+.remember label{
+	font-size:13px !important;
+}
+.school_logo{
+	text-align: center;
+	padding: 3px;
+	margin-bottom:5px;
+}
+.homepage  div{
+	border:none !important;
+}
+ul.user-info{
+list-style: none;
+padding: 0px;
+margin: 0px;
+}
+ul.user-info li{
+display: inline-block;
+border-left: 1px #ccc dotted;
+padding-left: 6px;
+}
+div.user-profile{
+	padding-top:1em;
+	margin:0 0.7em;
+}
+div.basic-info{
+	margin-left:0.6em;
+}
+.section-title{
+	border-bottom:1px #ccc dotted;
+}
+ul.affilations-list, ul.apps-list{
+	list-style:none;
+}
+ul.affilations-list li.affliation{
+	margin-bottom:3px;
+}
+ul.affilations-list li.affliation .membership {
+	font-size: 0.8em;
+}
+ul.apps-list li.application{
+	display:inline-block;
+	height:100px;
+	width:100px;
+	vertical-align:top;
+	text-align:center;
+	margin-bottom:0.5em;
+}
+ul.apps-list li.application a.disabled {
+	color:#ccc;
+}
+ul.apps-list li.application .app-icon{
+	font-size: 5em;
+	display: inline-block;
+	text-align: center;
+}
+ul.apps-list li.application .app-name{
+	font-size: 0.9em;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+section.profile-section{
+	min-height: 195px !important;
+}
+.action-btn{
+	margin-right:0.3em;
+	text-align:center;
+}
+.nomargin{
+	margin:0px;
+}
